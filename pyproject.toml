@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "get-papers-nikhilvh"
+version = "0.1.0"
+description = "CLI tool to fetch and filter PubMed papers based on user query"
+authors = ["Nikhil <nikhilvh2600@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "get_papers" }]
+license = "MIT"
+keywords = ["pubmed", "papers", "pharma", "biotech"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+requests = "^2.31.0"
+biopython = "^1.83"
+tqdm = "^4.66.0"
+
+[tool.poetry.scripts]
+get-papers-list = "get_papers.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
